@@ -102,7 +102,14 @@ def calculate_conversion_metrics(df):
     }
 
 def perform_rfm_analysis(df):
-    snapshot_date = df['date'].max() + pd.Timedelta(days=1)
+    if df.empty or 'date' not in df.columns:
+        return pd.DataFrame(columns=['customer_id', 'recency', 'frequency', 'monetary', 'R_score', 'F_score', 'M_score'])
+    
+    valid_dates = df['date'].dropna()
+    if valid_dates.empty:
+        return pd.DataFrame(columns=['customer_id', 'recency', 'frequency', 'monetary', 'R_score', 'F_score', 'M_score'])
+    
+    snapshot_date = valid_dates.max() + pd.Timedelta(days=1)
     
     rfm = df.groupby('customer_id').agg({
         'date': lambda x: (snapshot_date - x.max()).days,
@@ -112,9 +119,9 @@ def perform_rfm_analysis(df):
     
     rfm.columns = ['customer_id', 'recency', 'frequency', 'monetary']
     
-    rfm['R_score'] = pd.qcut(rfm['recency'], q=5, labels=[1, 2, 3, 4, 5], duplicates='drop')
-    rfm['F_score'] = pd.qcut(rfm['frequency'].rank(method='first'), q=5, labels=[1, 2, 3, 4, 5])
-    rfm['M_score'] = pd.qcut(rfm['monetary'].rank(method='first'), q=5, labels=[1, 2, 3, 4, 5])
+    rfm['R_score'] = pd.qcut(rfm['recency'], q=5, labels=[5, 4, 3, 2, 1], duplicates='drop')
+    rfm['F_score'] = pd.qcut(rfm['frequency'].rank(method='first'), q=5, labels=[1, 2, 3, 4, 5], duplicates='drop')
+    rfm['M_score'] = pd.qcut(rfm['monetary'].rank(method='first'), q=5, labels=[1, 2, 3, 4, 5], duplicates='drop')
     
     return rfm
 
