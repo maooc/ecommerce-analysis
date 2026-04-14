@@ -1,0 +1,51 @@
+order_id,date,product_category,product_name,quantity,unit_price,total_amount,customer_id,payment_method,region
+ORD001,2024-01-15,Electronics,Wireless Earbuds,2,79.99,159.98,CUST001,Credit Card,North
+ORD002,2024-01-15,Clothing,Winter Jacket,1,189.99,189.99,CUST002,PayPal,South
+ORD003,2024-01-15,Electronics,Smart Watch,1,299.99,299.99,CUST003,Credit Card,East
+ORD004,2024-01-16,Home & Garden,LED Lamp,3,45.00,135.00,CUST004,Debit Card,West
+ORD005,2024-01-16,Books,Programming Guide,5,35.00,175.00,CUST005,Credit Card,North
+ORD006,2024-01-16,Sports,Yoga Mat,2,25.00,50.00,CUST006,PayPal,South
+ORD007,2024-01-17,Electronics,Tablet Stand,1,49.99,49.99,CUST001,Credit Card,East
+ORD008,2024-01-17,Clothing,Running Shoes,1,120.00,120.00,CUST007,Debit Card,West
+ORD009,2024-01-17,Home & Garden,Coffee Maker,1,89.99,89.99,CUST002,Credit Card,North
+ORD010,2024-01-18,Electronics,Bluetooth Speaker,2,65.00,130.00,CUST008,PayPal,South
+ORD011,2024-01-18,Books,Data Science Handbook,3,55.00,165.00,CUST009,Credit Card,East
+ORD012,2024-01-18,Sports,Dumbbells Set,1,75.00,75.00,CUST010,Debit Card,West
+ORD013,2024-01-19,Clothing,T-Shirt Pack,4,25.00,100.00,CUST011,Credit Card,North
+ORD014,2024-01-19,Electronics,Phone Charger,3,19.99,59.97,CUST012,PayPal,South
+ORD015,2024-01-19,Home & Garden,Plant Pot Set,2,30.00,60.00,CUST001,Credit Card,East
+ORD016,2024-01-20,Books,Novel Collection,2,45.00,90.00,CUST013,Debit Card,West
+ORD017,2024-01-20,Electronics,Wireless Mouse,2,35.00,70.00,CUST014,Credit Card,North
+ORD018,2024-01-20,Sports,Basketball,1,35.00,35.00,CUST015,PayPal,South
+ORD019,2024-01-21,Clothing,Hoodie,3,55.00,165.00,CUST016,Credit Card,East
+ORD020,2024-01-21,Home & Garden,Vacuum Cleaner,1,199.99,199.99,CUST017,Debit Card,West
+ORD021,2024-01-21,Electronics,External SSD 1TB,1,129.99,129.99,CUST018,Credit Card,North
+ORD022,2024-01-22,Books,Cookbook,4,28.00,112.00,CUST019,PayPal,South
+ORD023,2024-01-22,Sports,Tennis Racket,1,85.00,85.00,CUST020,Debit Card,East
+ORD024,2024-01-22,Clothing,Jeans,2,65.00,130.00,CUST021,Credit Card,West
+ORD025,2024-01-23,Electronics,Webcam HD,1,79.99,79.99,CUST022,PayPal,North
+ORD026,2024-01-23,Home & Garden,Toaster,1,49.99,49.99,CUST023,Credit Card,South
+ORD027,2024-01-23,Books,Biography,3,32.00,96.00,CUST024,Debit Card,East
+ORD028,2024-01-24,Sports,Jump Rope,4,12.00,48.00,CUST025,Credit Card,West
+ORD029,2024-01-24,Electronics,Mechanical Keyboard,1,149.99,149.99,CUST001,PayPal,North
+ORD030,2024-01-24,Clothing,Sweater,2,75.00,150.00,CUST026,Credit Card,South
+ORD031,2024-01-25,Home & Garden,Blender,1,69.99,69.99,CUST027,Debit Card,East
+ORD032,2024-01-25,Books,Self Help Book,5,22.00,110.00,CUST028,Credit Card,West
+ORD033,2024-01-25,Electronics,Monitor 27inch,1,349.99,349.99,CUST029,PayPal,North
+ORD034,2024-01-26,Sports,Resistance Bands,3,18.00,54.00,CUST030,Debit Card,South
+ORD035,2024-01-26,Clothing,Dress,1,95.00,95.00,CUST031,Credit Card,East
+ORD036,2024-01-26,Home & Garden,Air Purifier,1,179.99,179.99,CUST032,PayPal,West
+ORD037,2024-01-27,Electronics,USB Hub,2,25.00,50.00,CUST002,Credit Card,North
+ORD038,2024-01-27,Books,History Encyclopedia,2,65.00,130.00,CUST033,Debit Card,South
+ORD039,2024-01-27,Sports,Swimming Goggles,2,15.00,30.00,CUST034,Credit Card,East
+ORD040,2024-01-28,Clothing,Sneakers,1,110.00,110.00,CUST035,PayPal,West
+ORD041,2024-01-28,Electronics,Graphics Tablet,1,199.99,199.99,CUST036,Credit Card,North
+ORD042,2024-01-28,Home & Garden,Desk Organizer,3,22.00,66.00,CUST037,Debit Card,South
+ORD043,2024-01-29,Books,Travel Guide,4,28.00,112.00,CUST038,PayPal,East
+ORD044,2024-01-29,Sports,Fitness Tracker,1,89.99,89.99,CUST039,Credit Card,West
+ORD045,2024-01-29,Electronics,Power Bank,2,45.00,90.00,CUST040,Debit Card,North
+ORD046,2024-01-30,Clothing,Leather Belt,3,35.00,105.00,CUST041,Credit Card,South
+ORD047,2024-01-30,Home & Garden,Rug 5x7,1,150.00,150.00,CUST042,PayPal,East
+ORD048,2024-01-30,Books,Art Book,2,48.00,96.00,CUST043,Debit Card,West
+ORD049,2024-01-31,Sports,Golf Clubs Set,1,450.00,450.00,CUST044,Credit Card,North
+ORD050,2024-01-31,Electronics,Smart TV 50inch,1,599.99,599.99,CUST045,PayPal,South
