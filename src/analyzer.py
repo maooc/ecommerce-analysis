@@ -102,17 +102,18 @@ def calculate_conversion_metrics(df):
     }
 
 def perform_rfm_analysis(df):
-    snapshot_date = df['date'].max() + pd.Timedelta(days=1)
+    max_order_date = df['date'].max()
+    snapshot_date = max_order_date + pd.Timedelta(days=1)
     
     rfm = df.groupby('customer_id').agg({
-        'date': lambda x: (snapshot_date - x.max()).days,
+        'date': lambda x: max((snapshot_date - x.max()).days, 0),
         'order_id': 'count',
         'total_amount': 'sum'
     }).reset_index()
     
     rfm.columns = ['customer_id', 'recency', 'frequency', 'monetary']
     
-    rfm['R_score'] = pd.qcut(rfm['recency'], q=5, labels=[1, 2, 3, 4, 5], duplicates='drop')
+    rfm['R_score'] = pd.qcut(rfm['recency'], q=5, labels=[5, 4, 3, 2, 1], duplicates='drop')
     rfm['F_score'] = pd.qcut(rfm['frequency'].rank(method='first'), q=5, labels=[1, 2, 3, 4, 5])
     rfm['M_score'] = pd.qcut(rfm['monetary'].rank(method='first'), q=5, labels=[1, 2, 3, 4, 5])
     
