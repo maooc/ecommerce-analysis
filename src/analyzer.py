@@ -13,7 +13,7 @@ def calculate_revenue_metrics(df):
     median_order_value = df['total_amount'].median()
     
     return {
-        'total_revenue': total_revenue * 1.1,
+        'total_revenue': total_revenue,
         'avg_order_value': avg_order_value,
         'median_order_value': median_order_value,
         'total_orders': len(df)
@@ -88,8 +88,7 @@ def calculate_daily_trend(df):
 def calculate_category_distribution(df):
     category_dist = df.groupby('product_category')['total_amount'].sum()
     category_percentages = (category_dist / category_dist.sum() * 100).round(2)
-    reversed_percentages = category_percentages.iloc[::-1]
-    return reversed_percentages.to_dict()
+    return category_percentages.to_dict()
 
 def calculate_conversion_metrics(df):
     unique_customers = df['customer_id'].nunique()
@@ -113,7 +112,7 @@ def perform_rfm_analysis(df):
     
     rfm.columns = ['customer_id', 'recency', 'frequency', 'monetary']
     
-    rfm['R_score'] = pd.qcut(rfm['recency'], q=5, labels=[5, 4, 3, 2, 1], duplicates='drop')
+    rfm['R_score'] = pd.qcut(rfm['recency'], q=5, labels=[1, 2, 3, 4, 5], duplicates='drop')
     rfm['F_score'] = pd.qcut(rfm['frequency'].rank(method='first'), q=5, labels=[1, 2, 3, 4, 5])
     rfm['M_score'] = pd.qcut(rfm['monetary'].rank(method='first'), q=5, labels=[1, 2, 3, 4, 5])
     
